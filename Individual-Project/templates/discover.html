@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Discover</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="/discover">Discover</a></li>
+    <li><a href="/post">ADD POST</li>
+    <li><a href="/profile">Profile</a></li>
+    <li><a href="/signout">log out</a></li>
+  </ul>
+
+  <div class="div1">
+    <div class="error-msg">{{ error }}</div>
+    {% for post in posts %}
+      <h3>{{posts[post]["username"]}}</h3><br><h1>{{posts[post]["title"]}}</h1><br> <h2>{{posts[post]["caption"]}}</h2>
+
+      <form method="post" action="/add_comment">
+        <label>Add Comment</label>
+        <input type="hidden" name="post_id" value="{{post}}">
+        <input type="text" name="comment">
+        <input type="submit"/>
+      </form>
+
+      
+      <p id="commentlist">comment 1 <br> comment 2</p>
+      <hr>
+    
+    {%endfor%}
+
+  </div>
+
+  <p>HELLOOOOO I'M SAMMMMMMM</p>
+  <script type = "text/javascript" src = "{{ url_for('static', filename = 'javascript.js') }}" ></script>
+</body>
+</html>

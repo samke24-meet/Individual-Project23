@@ -1,0 +1,37 @@
+.div1{
+	text-align: center;
+}
+
+.div2{
+  text-align: left;
+}
+body{
+	background-color: #FDAED0;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 1000;
+  overflow: hidden;
+  background-color: lightgreen;
+}
+
+li {
+  float: left;
+  text-align: center;
+}
+
+li a {
+  display: inline;
+  padding: 100px;
+  background-color: #dddddd;
+}
+
+hr {
+  border: 1px dashed darkmagenta;
+}
+
+.error-msg {
+  color: red;
+  font-size: 1.2em;
+}
