@@ -17,7 +17,12 @@
   <div class="div1">
     <div class="error-msg">{{ error }}</div>
     {% for post in posts %}
-      <h3>{{posts[post]["username"]}}</h3><br><h1>{{posts[post]["title"]}}</h1><br> <h2>{{posts[post]["caption"]}}</h2>
+      <h3>{{posts[post]["username"]}}</h3><br><h1>{{posts[post]["title"]}}</h1><br> <h2>{{posts[post]["caption"]}}</h2><br><br><br><br>
+      <!--{% for comment in comments %}
+        <h5>{{posts[post]["comments"][comment](0)}}</h5>
+        <br>
+        <h6>{{posts[post]["comments"][comment](1)}}</h6>
+      {%endfor%}-->
 
       <form method="post" action="/add_comment">
         <label>Add Comment</label>

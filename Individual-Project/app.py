@@ -117,7 +117,7 @@ def add_comment():
             db.child("Posts").child(postID).push(comments_template)
         except:
             print("sade")
-    return redirect(url_for("discover.html"))
+    return redirect(url_for("discover"))
 
 #Code goes above here
 
